@@ -15,7 +15,7 @@ module.exports = function(passport) {
             displayName: profile.displayName,
             firstName: profile.name.givenName,
             lastName: profile.name.familyName,
-            image: profile.photos[0].value,
+            image: profile.photos[0].value
         }
         try {
             let user = await User.findOne({ googleId: profile.id})
